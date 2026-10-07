@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ROSHDY TECH | لابتوبات - موبايلات - إكسسوارات</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;800&display=swap">
+<style>
+:root{--bg:#f4f6fb;--card:#fff;--tx:#0f172a;--mu:#64748b;--bd:#e2e8f0;--ac:#2563eb;--ac2:#7c3aed;--wa:#16a34a;--sh:0 8px 30px rgba(15,23,42,.08)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0a0e1a;--card:#121829;--tx:#e8edf8;--mu:#8a96b2;--bd:#1f2942;--ac:#4f8cff;--ac2:#a78bfa;--sh:0 8px 30px rgba(0,0,0,.4)}}
+:root[data-theme="dark"]{--bg:#0a0e1a;--card:#121829;--tx:#e8edf8;--mu:#8a96b2;--bd:#1f2942;--ac:#4f8cff;--ac2:#a78bfa;--sh:0 8px 30px rgba(0,0,0,.4)}
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+html{scroll-behavior:smooth;scroll-padding-top:calc(76px + env(safe-area-inset-top,0px))}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:Cairo,Tahoma,Arial,sans-serif;overflow-x:hidden}
+button{font-family:inherit;cursor:pointer}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:30;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--bd)}
+.hd{display:flex;align-items:center;justify-content:space-between;height:64px;gap:10px}
+.logo{font-weight:800;font-size:22px;letter-spacing:1px;background:linear-gradient(90deg,var(--ac),var(--ac2),var(--ac));background-size:200% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;animation:flow 4s linear infinite;text-decoration:none;direction:ltr}
+nav{display:flex;gap:4px}
+nav a{color:var(--tx);text-decoration:none;font-weight:600;font-size:14px;padding:8px 12px;border-radius:99px;transition:.25s}
+nav a:hover{background:var(--card);color:var(--ac)}
+.cartbtn,.tbtn{position:relative;border:1px solid var(--bd);background:var(--card);color:var(--tx);border-radius:99px;padding:8px 14px;font-weight:700;font-size:14px;transition:.25s}
+.cartbtn:hover,.tbtn:hover{transform:translateY(-2px);box-shadow:var(--sh)}
+.cartbtn.bump{animation:bump .5s}
+.bdg{position:absolute;top:-6px;left:-6px;background:var(--ac2);color:#fff;border-radius:99px;font-size:11px;min-width:20px;height:20px;display:grid;place-items:center;padding:0 5px}
+.hero{position:relative;padding:48px 0 36px;overflow:hidden}
+.blob{position:absolute;border-radius:50%;filter:blur(70px);opacity:.35;animation:float 9s ease-in-out infinite}
+.b1{width:320px;height:320px;background:var(--ac);top:-80px;right:-60px}
+.b2{width:280px;height:280px;background:var(--ac2);bottom:-80px;left:-40px;animation-delay:-4s}
+.hg{position:relative;display:grid;grid-template-columns:1.1fr .9fr;gap:24px;align-items:center}
+.hero h1{font-size:clamp(32px,6vw,58px);line-height:1.2;margin:0 0 12px;font-weight:800}
+.hero h1 span{background:linear-gradient(90deg,var(--ac),var(--ac2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:var(--mu);font-size:17px;margin:0 0 22px;max-width:520px}
+.cta{display:flex;gap:10px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;border:0;border-radius:12px;padding:11px 18px;font-weight:700;font-size:14px;text-decoration:none;color:#fff;background:linear-gradient(135deg,var(--ac),var(--ac2));transition:.25s;position:relative;overflow:hidden}
+.btn:hover{transform:translateY(-3px);box-shadow:0 10px 24px rgba(79,140,255,.35)}
+.btn.wa{background:var(--wa)}
+.btn.wa:hover{box-shadow:0 10px 24px rgba(22,163,74,.4)}
+.btn.gh{background:var(--card);color:var(--tx);border:1px solid var(--bd)}
+.pulse{animation:pulse 2.2s infinite}
+.stats{display:flex;gap:22px;margin-top:26px}
+.stats b{display:block;font-size:26px;font-weight:800;color:var(--ac)}
+.stats small{color:var(--mu)}
+.hart{animation:float 5s ease-in-out infinite;filter:drop-shadow(0 30px 40px rgba(79,140,255,.3))}
+section{padding:40px 0}
+.sh{display:flex;align-items:end;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+.sh h2{margin:0;font-size:28px;font-weight:800}
+.sh h2::after{content:"";display:block;height:4px;width:54px;border-radius:9px;margin-top:6px;background:linear-gradient(90deg,var(--ac),var(--ac2));animation:grow 1s both}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.chip{border:1px solid var(--bd);background:var(--card);color:var(--tx);border-radius:99px;padding:7px 14px;font-weight:600;font-size:13px;transition:.25s}
+.chip:hover{transform:translateY(-2px)}
+.chip.on{background:linear-gradient(135deg,var(--ac),var(--ac2));color:#fff;border-color:transparent}
+.inp{flex:1;min-width:160px;border:1px solid var(--bd);background:var(--card);color:var(--tx);border-radius:12px;padding:11px 14px;font:inherit;font-size:14px;outline:none;transition:.25s}
+.inp:focus{border-color:var(--ac);box-shadow:0 0 0 3px color-mix(in srgb,var(--ac) 25%,transparent)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:18px;padding:14px;box-shadow:var(--sh);transition:transform .3s,border-color .3s;display:flex;flex-direction:column;gap:8px}
+.card:hover{transform:translateY(-6px);border-color:var(--ac)}
+.rv{opacity:0;transform:translateY(26px) scale(.97);transition:opacity .6s,transform .6s}
+.rv.in{opacity:1;transform:none}
+.art{border-radius:12px;background:linear-gradient(135deg,color-mix(in srgb,var(--c) 18%,var(--bg)),var(--bg));display:grid;place-items:center;padding:8px;overflow:hidden}
+.art svg{width:100%;height:auto;max-height:130px;transition:transform .4s}
+.card:hover .art svg{transform:scale(1.08) rotate(-2deg)}
+.card h3{margin:0;font-size:15px;font-weight:800;direction:ltr;text-align:right}
+.sp{display:flex;flex-wrap:wrap;gap:5px}
+.sp span{font-size:11.5px;background:color-mix(in srgb,var(--ac) 12%,transparent);color:var(--ac);border-radius:7px;padding:3px 8px;font-weight:600;direction:ltr}
+.stk{font-size:12px;color:var(--mu)}
+.stk.low{color:#f59e0b;font-weight:700}
+.price{font-size:20px;font-weight:800;color:var(--ac)}
+.ac{display:flex;gap:8px;margin-top:auto}
+.ac .btn{flex:1;padding:9px 8px;font-size:13px}
+.ico{font-size:46px;animation:float 4s ease-in-out infinite}
+.more{display:block;margin:22px auto 0}
+.mob{background:var(--card);border:1px solid var(--bd);border-radius:22px;padding:24px;box-shadow:var(--sh);text-align:center}
+.mob h3{margin:0 0 6px;font-size:22px}
+.mob p{color:var(--mu);margin:0 0 16px}
+.mob .chips{justify-content:center}
+.mrow{display:flex;gap:8px;max-width:520px;margin:16px auto 0;flex-wrap:wrap}
+.ph{font-size:64px;display:inline-block;animation:float 3.5s ease-in-out infinite}
+footer{border-top:1px solid var(--bd);padding:28px 0 36px;margin-top:30px;text-align:center;color:var(--mu)}
+footer a{color:var(--ac);font-weight:700;text-decoration:none}
+.ov{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:40;animation:fade .3s}
+.dr{position:fixed;top:0;bottom:0;left:0;width:min(420px,100%);background:var(--bg);z-index:41;display:flex;flex-direction:column;animation:slide .35s cubic-bezier(.2,.8,.2,1);padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+.dh{display:flex;justify-content:space-between;align-items:center;padding:16px;border-bottom:1px solid var(--bd);font-weight:800;font-size:18px}
+.db{flex:1;overflow:auto;padding:12px 16px;display:flex;flex-direction:column;gap:10px}
+.it{display:flex;gap:10px;align-items:center;background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:10px;animation:fade .3s}
+.it div:first-child{flex:1;min-width:0}
+.it b{display:block;font-size:13px;direction:ltr;text-align:right}
+.it small{color:var(--mu)}
+.q{display:flex;align-items:center;gap:6px}
+.q button{width:28px;height:28px;border-radius:8px;border:1px solid var(--bd);background:var(--bg);color:var(--tx);font-weight:800}
+.df{padding:16px;border-top:1px solid var(--bd);display:flex;flex-direction:column;gap:10px}
+.empty{text-align:center;color:var(--mu);padding:40px 0}
+.toast{position:fixed;bottom:calc(20px + env(safe-area-inset-bottom,0px));left:50%;transform:translateX(-50%);background:var(--tx);color:var(--bg);padding:10px 18px;border-radius:99px;font-weight:700;font-size:14px;z-index:50;animation:toast 2s both}
+.fab{position:fixed;bottom:calc(18px + env(safe-area-inset-bottom,0px));right:18px;width:56px;height:56px;border-radius:50%;background:var(--wa);display:grid;place-items:center;font-size:28px;text-decoration:none;z-index:25;animation:pulse 2.2s infinite}
+@keyframes flow{to{background-position:200% 0}}
+@keyframes float{50%{transform:translateY(-14px)}}
+@keyframes bump{40%{transform:scale(1.2)}}
+@keyframes grow{from{width:0}}
+@keyframes fade{from{opacity:0}}
+@keyframes slide{from{transform:translateX(-100%)}}
+@keyframes toast{0%{opacity:0;transform:translate(-50%,20px)}12%,85%{opacity:1;transform:translate(-50%,0)}100%{opacity:0}}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(22,163,74,.55)}70%{box-shadow:0 0 0 14px rgba(22,163,74,0)}100%{box-shadow:0 0 0 0 rgba(22,163,74,0)}}
+@media (max-width:760px){.hg{grid-template-columns:1fr}nav{display:none}.hero{padding-top:28px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/htm@3.1.1/dist/htm.umd.js"></script>
+<script>
+const LAPTOPS=[[0,"HP","ELITEBOOK 845G8","R5-5650U","8GB","256GB","AMD",30],[1,"HP","ZBOOK14 FIRFLYG7 TOUCH","I7-10TH","32GB","512GB","NVIDIA 4GB P520",15],[2,"DELL","PERCISION 5570 4KTOUCH","I9-12TH","16GB","512GB","NVIDIA 8GB RTXA2000",15],[3,"DELL","PERCISION 5560 4KTOUCH","I9-11TH","16GB","512GB","NVIDIA 4GB RTXA2000",14],[4,"HP","ELITEBOOK 850G8","I7-11TH","8GB","256GB","Intel",12],[5,"HP","ELITEBOOK 840G8","I5-11TH","8GB","256GB","Intel",11],[6,"DELL","LATITUDE 5420","I5-10TH","8GB","256GB","Intel",10],[7,"SURFACE","LAPTOP_2_1769 2KTOUCH","I7-8TH","16GB","512GB","Intel",9],[8,"HP","ELITEBOOK 840G6","I5-8TH","8GB","256GB","Intel",8],[9,"HP","PROBOOK 650G5","I7-8TH","8GB","256GB","Intel",7],[10,"DELL","LATITUDE 7420","I5-11TH","16GB","256GB","Intel",6],[11,"DELL","LATITUDE 5400","I5-8TH","8GB","256GB","Intel",5],[12,"DELL","XPS13 9310","I7-11TH","32GB","256GB","Intel",4],[13,"HP","PROBOOK 650G5","I5-8TH","8GB","256GB","Intel",3],[14,"HP","PROBOOK 640G8","I5-11TH","8GB","256GB","Intel",3],[15,"DELL","PERCISION 5550","I7-10TH","16GB","512GB","NVIDIA 4GB T2000",3],[16,"DELL","LATITUDE 5401 TOUCH","I7-9TH H","8GB","256GB","Intel",3],[17,"DELL","LATITUDE 5310 X360","I5-10TH","8GB","256GB","Intel",3],[18,"DELL","LATITUDE 5310","I5-10TH","8GB","256GB","Intel",3],[19,"HP","ZBOOK17G5","I7-8TH","16GB","512GB","Intel",2],[20,"HP","ZBOOK14 FIRFLYG7 TOUCH","I7-10TH","16GB","256GB","Intel",2],[21,"DELL","XPS13 9365","I7-7TH","16GB","256GB","Intel",2],[22,"DELL","XPS13 9320","I7-12TH","16GB","512GB","Intel",2],[23,"LENOVO","X1CARBONGEN6","I7-8TH","8GB","256GB","Intel",2],[24,"DELL","PERCISON 3571","I7-12TH","16GB","512GB","NVIDIA 4GB T600",2],[25,"DELL","PERCISION 7560","I7-11TH","16GB","512GB","NVIDIA 4GB T1200",2],[26,"DELL","PERCISION 3480","I5-135P","8GB","256GB","Intel",2],[27,"DELL","LATITUDE 7410 TOUCH","I5-10TH","16GB","256GB","Intel",2],[28,"DELL","LATITUDE 7400 TOUCH","I5-8TH","8GB","256GB","Intel",2],[29,"DELL","LATITUDE 5430","I5-12TH","8GB","256GB","Intel",2],[30,"HP","ELITEBOOK 850G7","I5-10TH","8GB","256GB","Intel",2],[31,"HP","ELITEBOOK 845G9","R7","8GB","256GB","AMD",2],[32,"HP","ELITEBOOK 845G8","R7","8GB","256GB","AMD",2],[33,"HP","ELITEBOOK 840G7","I5-10TH","8GB","256GB","Intel",2],[34,"HP","ELITEBOOK 840G6","I7-8TH","8GB","256GB","Intel",2],[35,"HP","ELITEBOOK 840G10","I7-13TH","8GB","256GB","Intel",2],[36,"HP","ELITEBOOK 835G7","R3","16GB","256GB","AMD",2],[37,"HP","ZBOOK17 FURYG7","I7-10TH","16GB","512GB","NVIDIA 4GB RTX3000",1],[38,"HP","ZBOOK16 STUDIOG9","I7-12TH","16GB","512GB","NVIDIA 4GB RTXA1000",1],[39,"HP","ZBOOK16 STUDIOG11","ULTRA7","16GB","512GB","NVIDIA 6GB RTXA1000",1],[40,"HP","ZBOOK15 STUDIOG8","I7-11TH","16GB","512GB","NVIDIA 4GB T1200",1],[41,"HP","ZBOOK15 STUDIOG7","I7-10TH","32GB","512GB","NVIDIA 6GB RTXA3000",1],[42,"HP","ZBOOK15 STUDIOG7","I7-10TH","32GB","512GB","NVIDIA 4GB T1000",1],[43,"HP","ZBOOK14 FIRFLYG9","I7-12TH","8GB","256GB","Intel",1],[44,"HP","ZBOOK14 FIRFLYG7","I5-10TH","8GB","256GB","Intel",1],[45,"DELL","XPS13 9380","I7-8TH","16GB","256GB","Intel",1],[46,"DELL","XPS13 9350 TOUCH","I5-6TH","8GB","256GB","Intel",1],[47,"DELL","XPS13 7390","I7-10TH","16GB","256GB","Intel",1],[48,"LENOVO","X1CARBON","I7-5TH","8GB","128GB","Intel",1],[49,"LENOVO","X1 YOGA","I7-8TH","16GB","256GB","Intel",1],[50,"LENOVO","THINKPAD X13GEN2","I5-11TH","16GB","256GB","Intel",1],[51,"LENOVO","THINKBAD T480","I5-8TH","8GB","256GB","Intel",1],[52,"LENOVO","THINKBAD T14S","I5-10TH","16GB","256GB","Intel",1],[53,"LENOVO","THINKBAD P14SGEN1","R7-4750U","16GB","256GB","Intel",1],[54,"LENOVO","THINBAD P50","XEON","32GB","512GB","NVIDIA 4GB",1],[55,"HP","PROBOOK 440G8","I5-11TH","8GB","256GB","Intel",1],[56,"DELL","PERCISION M4800","I7-4TH","16GB","180GB","AMD2GB M5100",1],[57,"DELL","PERCISION 7760","I7-11TH","16GB","512GB","NVIDIA 16GB RTX5000",1],[58,"DELL","PERCISION 7750","XEON-10885","16GB","512GB","NVIDIA 16GB RTX5000",1],[59,"DELL","PERCISION 7750","I7-10TH","16GB","512GB","NVIDIA 16GB RTX5000",1],[60,"DELL","PERCISION 7740","I7-9TH","16GB","512GB","NVIDIA 16GB RTX5000",1],[61,"DELL","PERCISION 7740","I9-9TH","16GB","512GB","NVIDIA 8GB RTX4000",1],[62,"DELL","PERCISION 7740","I5-9TH","16GB","512GB","Intel",1],[63,"DELL","PERCISION 7740","I7-9TH","32GB","512GB","Intel",1],[64,"DELL","PERCISION 7730","I7-8TH","16GB","512GB","NVIDIA 6GB P3200",1],[65,"DELL","PERCISION 7720","I7-6HQ","16GB","512GB","NVIDIA 16GB P5000",1],[66,"DELL","PERCISION 7550","I7-10TH","32GB","512GB","NVIDIA 4GB T1000",1],[67,"DELL","PERCISION 5570 4K TOUCH","I7-12TH","16GB","512GB","NVIDIA 4GB RTXA2000",1],[68,"DELL","PERCISION 5560","I7-11TH","16GB","512GB","NVIDIA 4GB T1200",1],[69,"DELL","PERCISION 5540 4KTOUCH","I9-9TH","16GB","512GB","NVIDIA 4GB T2000",1],[70,"DELL","PERCISION 3581","I7-13TH","16GB","512GB","Intel",1],[71,"HP","OMNIBOOK_ULTRA_FLIPX360","ULTRA7","16GB","1TB","Intel",1],[72,"DELL","LATITUDE 7490","I5-8TH","8GB","256GB","Intel",1],[73,"DELL","LATITUDE 7490","I7-8TH","8GB","256GB","Intel",1],[74,"DELL","LATITUDE 7480","I5-6TH","8GB","256GB","Intel",1],[75,"DELL","LATITUDE 7410","I5-10TH","16GB","256GB","Intel",1],[76,"DELL","LATITUDE 7400 X360","I5-8TH","16GB","256GB","Intel",1],[77,"DELL","LATITUDE 7400","I7-8TH","8GB","256GB","Intel",1],[78,"DELL","LATITUDE 7390 2IN1","I7-8TH","16GB","256GB","Intel",1],[79,"DELL","LATITUDE 7390","I5-7TH","8GB","256GB","Intel",1],[80,"DELL","LATITUDE 7330","I7-12TH","8GB","256GB","Intel",1],[81,"DELL","LATITUDE 5490","I5-7TH","8GB","256GB","Intel",1],[82,"DELL","LATITUDE 5440","I5-13TH","8GB","256GB","Intel",1],[83,"DELL","LATITUDE 5430","I7-12TH","8GB","256GB","Intel",1],[84,"DELL","LATITUDE 5330 X360","I5-12TH","8GB","256GB","Intel",1],[85,"DELL","LATITUDE 5300 X360","I7-8TH","8GB","256GB","Intel",1],[86,"DELL","LATITUDE 5300","I7-8TH","8GB","256GB","Intel",1],[87,"DELL","LATITUDE 5290 2IN1","I7-8TH","16GB","512GB","Intel",1],[88,"HP","ENVY17 INCH","I7-8TH","16GB","256GB","NVIDIA 4GB",1],[89,"HP","ELITEBOOK 850G7","I7-10TH","8GB","256GB","Intel",1],[90,"HP","ELITEBOOK 845G10","R7","16GB","256GB","AMD",1],[91,"HP","ELITEBOOK 840G5 TOUCH","I7-8TH","8GB","256GB","Intel",1],[92,"HP","ELITEBOOK 840G10","I5-13TH","16GB","512GB","Intel",1],[93,"HP","ELITEBOOK 830G8","I5-11TH","8GB","256GB","Intel",1],[94,"HP","ELITEBOOK 830G7 TOUCH","I5-10TH","8GB","256GB","Intel",1],[95,"HP","ELITEBOOK 645G10","R5","8GB","256GB","AMD",1],[96,"SURFACE","BOOK_3_1899","I7-10TH","16GB","256GB","NVIDIA 6GB RTX3000",1],[97,"SURFACE","BOOK LAPTOP","I7-6TH","16GB","512GB","NVIDIA 1GB",1],[98,"SURFACE","BOOK 1796 2IN1","I7-8TH","16GB","512GB","Intel",1],[99,"HP","ELITEBOOK 845G7 TOUCH","R5-4650U","16GB","256GB","AMD",1]];
+const ACC=[[0,"ساعة ذكية MX10 - 4 ستراب","370","⌚ ساعات","⌚"],[1,"سودو أصلية","370","✨ أخرى","✨"],[2,"ساعة ذكية كالوبِي SK37","1500","⌚ ساعات","⌚"],[3,"ماوس وايرلس","130","🖱️ لابتوب","🖱️"],[4,"X9 ألترا أصلي","700","⌚ ساعات","⌚"],[5,"جراب لأي نوع تليفون","60","🛡️ حماية","🛡️"],[6,"رأس شاحن سامسونج أصلي 25 وات","200","🔌 شواحن وكابلات","🔌"],[7,"رأس شاحن سامسونج أصلي 45 وات","240","🔌 شواحن وكابلات","🔌"],[8,"وصلة شاحن سامسونج تايب سي إلى تايب سي أصلية","100","🔌 شواحن وكابلات","🔌"],[9,"وصلة شاحن أنكر تايب سي إلى تايب سي","100","🔌 شواحن وكابلات","🔌"],[10,"وصلة شاحن آيفون من أنكر","100","🔌 شواحن وكابلات","🔌"],[11,"وصلة شاحن آيفون أصلية","100","🔌 شواحن وكابلات","🔌"],[12,"وصلة شاحن آيفون تايب سي إلى تايب سي","100","🔌 شواحن وكابلات","🔌"],[13,"إيربودز أنكر أصلية R60i NC","1550","🎧 سماعات","🎧"],[14,"إيربودز أنكر أصلية R50i NC","1200","🎧 سماعات","🎧"],[15,"إيربودز أنكر أصلية R50i","850","🎧 سماعات","🎧"],[16,"اسكرينات - السعر من 20 إلى 150 جنيه","20–150","🛡️ حماية","🛡️"],[17,"إيربودز برو","200","🎧 سماعات","🎧"],[18,"إيربودز برو 2","250","🎧 سماعات","🎧"]];
+const {useState,useEffect,useRef,useMemo}=React;
+const html=htm.bind(React.createElement);
+const PHONE="201070813566",FB="https://www.facebook.com/share/19pWkHuwm9/";
+const wa=t=>"https://wa.me/"+PHONE+"?text="+encodeURIComponent(t);
+const COL={HP:"#3b82f6",DELL:"#06b6d4",LENOVO:"#ef4444",SURFACE:"#a855f7"};
+const mobBrands=["iPhone","Samsung","Xiaomi","Oppo","Realme","Honor","Infinix"];
+const num=p=>/^\d+$/.test(p)?+p:null;
+
+function Reveal({children,i=0}){
+  const r=useRef(),[v,setV]=useState(false);
+  useEffect(()=>{const o=new IntersectionObserver(e=>{if(e[0].isIntersecting){setV(true);o.disconnect()}},{threshold:.08});o.observe(r.current);return()=>o.disconnect()},[]);
+  return html`<div ref=${r} className=${"rv"+(v?" in":"")} style=${{transitionDelay:(i%6)*70+"ms"}}>${children}</div>`;
+}
+function LapArt({b,m,big}){
+  const c=COL[b]||"#4f8cff";
+  return html`<svg viewBox="0 0 200 130" style=${{"--c":c}} className=${big?"hart":""}>
+    <rect x="30" y="10" width="140" height="86" rx="8" fill="#0b1224" stroke=${c} strokeWidth="3"/>
+    <rect x="36" y="16" width="128" height="74" rx="4" fill=${c} opacity=".22"/>
+    <circle cx="150" cy="30" r="22" fill=${c} opacity=".25"/>
+    <text x="100" y="58" textAnchor="middle" fontSize="20" fontWeight="800" fill=${c} fontFamily="Arial">${b}</text>
+    ${!big&&html`<text x="100" y="76" textAnchor="middle" fontSize="8.5" fill="#cbd5e1" fontFamily="Arial">${m.slice(0,26)}</text>`}
+    <path d="M12 100h176l-10 14a8 8 0 0 1-7 4H29a8 8 0 0 1-7-4z" fill="#1e293b" stroke=${c} strokeWidth="1.5"/>
+    <rect x="80" y="100" width="40" height="5" rx="2.5" fill="#334155"/>
+  </svg>`;
+}
+function Laptop({d,i,add}){
+  const [id,b,m,cpu,ram,ssd,gpu,q]=d,name=b+" "+m;
+  const order=wa("السلام عليكم Roshdy Tech 👋\nعايز أطلب اللابتوب ده:\n💻 "+name+"\nالمعالج: "+cpu+" | الرام: "+ram+" | الهارد: "+ssd+" | الكارت: "+gpu+"\nممكن السعر والتفاصيل؟");
+  return html`<${Reveal} i=${i}><div className="card">
+    <div className="art" style=${{"--c":COL[b]||"#4f8cff"}}><${LapArt} b=${b} m=${m}/></div>
+    <h3>${name}</h3>
+    <div className="sp"><span>${cpu}</span><span>RAM ${ram}</span><span>SSD ${ssd}</span><span>${gpu}</span></div>
+    <div className=${"stk"+(q<2?" low":"")}>${q<2?"🔥 آخر قطعة":"✅ متوفر: "+q+" قطعة"}</div>
+    <div className="ac">
+      <a className="btn wa" href=${order} target="_blank" rel="noopener">💬 اطلب واتساب</a>
+      <button className="btn" onClick=${()=>add({id:"L"+id,name,sub:cpu+" / "+ram+" / "+ssd,price:null})}>🛒 للسلة</button>
+    </div></div><//>`;
+}
+function Acc({d,i,add}){
+  const [id,name,price,cat,ic]=d,p=num(price);
+  const order=wa("السلام عليكم Roshdy Tech 👋\nعايز أطلب:\n🛍️ "+name+(p?"\nالسعر: "+p+" جنيه":"\nالسعر: "+price+" جنيه"));
+  return html`<${Reveal} i=${i}><div className="card">
+    <div className="art" style=${{"--c":"#7c3aed",minHeight:110}}><span className="ico">${ic}</span></div>
+    <h3 style=${{direction:"rtl"}}>${name}</h3>
+    <div className="price">${price} <small style=${{fontSize:13,color:"var(--mu)"}}>جنيه</small></div>
+    <div className="ac">
+      <a className="btn wa" href=${order} target="_blank" rel="noopener">💬 اطلب</a>
+      <button className="btn" onClick=${()=>add({id:"A"+id,name,sub:cat,price:p})}>🛒 للسلة</button>
+    </div></div><//>`;
+}
+function Mobiles(){
+  const [q,setQ]=useState("");
+  const ask=t=>wa("السلام عليكم Roshdy Tech 👋\nعايز أستفسر عن موبايل "+t);
+  return html`<${Reveal}><div className="mob">
+    <div className="ph">📱</div>
+    <h3>موبايلات بأفضل الأسعار</h3>
+    <p>اختار الماركة أو اكتب الموديل اللي عايزه وهنرد عليك على واتساب بالسعر والتوفر.</p>
+    <div className="chips">${mobBrands.map(b=>html`<a key=${b} className="chip" href=${ask(b)} target="_blank" rel="noopener" style=${{textDecoration:"none"}}>${b}</a>`)}</div>
+    <div className="mrow">
+      <input className="inp" placeholder="اكتب موديل الموبايل..." value=${q} onChange=${e=>setQ(e.target.value)}/>
+      <a className="btn wa" href=${ask(q)} target="_blank" rel="noopener">💬 اطلب الموديل</a>
+    </div></div><//>`;
+}
+function Cart({items,set,close}){
+  const list=Object.values(items),tot=list.reduce((s,x)=>s+(x.price||0)*x.n,0),unp=list.some(x=>x.price==null);
+  const chg=(id,d)=>set(o=>{const x=o[id],n=x.n+d,c={...o};if(n<1)delete c[id];else c[id]={...x,n};return c});
+  const send=(()=>{
+    const l=list.map((x,i)=>(i+1)+". "+x.name+" ("+x.sub+") × "+x.n+(x.price?" = "+x.price*x.n+" ج":" — السعر عند التأكيد")).join("\n");
+    return wa("السلام عليكم Roshdy Tech 👋\nعايز أطلب الطلب ده:\n"+l+"\n\nإجمالي المعروف: "+tot+" جنيه"+(unp?" + أسعار اللابتوبات":""));
+  })();
+  return html`<div><div className="ov" onClick=${close}></div>
+  <aside className="dr"><div className="dh"><span>🛒 سلة الطلبات</span><button className="tbtn" onClick=${close}>✕</button></div>
+  <div className="db">${list.length?list.map(x=>html`<div className="it" key=${x.id}>
+    <div><b>${x.name}</b><small>${x.sub}${x.price?" • "+x.price+" ج":""}</small></div>
+    <div className="q"><button onClick=${()=>chg(x.id,1)}>+</button><b>${x.n}</b><button onClick=${()=>chg(x.id,-1)}>−</button></div></div>`):html`<div className="empty">السلة فاضية 🛍️<br/>ضيف منتجات وابعت طلبك على واتساب</div>`}</div>
+  ${list.length>0&&html`<div className="df">
+    <div style=${{display:"flex",justifyContent:"space-between",fontWeight:800}}><span>الإجمالي (المسعّر)</span><span>${tot} جنيه</span></div>
+    ${unp&&html`<small style=${{color:"var(--mu)"}}>أسعار اللابتوبات بتتأكد معانا على واتساب.</small>`}
+    <a className="btn wa pulse" href=${send} target="_blank" rel="noopener">💬 ابعت الطلب على واتساب</a>
+    <button className="tbtn" onClick=${()=>set({})}>تفريغ السلة</button></div>`}
+  </aside></div>`;
+}
+function App(){
+  const [cart,setCart]=useState(()=>{try{return JSON.parse(localStorage.getItem("rt_cart")||"{}")}catch(e){return{}}});
+  const [open,setOpen]=useState(false),[toast,setToast]=useState(0),[bump,setBump]=useState(false);
+  const [brand,setBrand]=useState("الكل"),[q,setQ]=useState(""),[lim,setLim]=useState(24),[ac,setAc]=useState("الكل");
+  useEffect(()=>{try{localStorage.setItem("rt_cart",JSON.stringify(cart))}catch(e){}},[cart]);
+  const add=it=>{setCart(o=>({...o,[it.id]:{...it,n:(o[it.id]?o[it.id].n:0)+1}}));setToast(Date.now());setBump(true);setTimeout(()=>setBump(false),500)};
+  useEffect(()=>{if(!toast)return;const t=setTimeout(()=>setToast(0),2000);return()=>clearTimeout(t)},[toast]);
+  const cnt=Object.values(cart).reduce((s,x)=>s+x.n,0);
+  const brands=useMemo(()=>["الكل",...new Set(LAPTOPS.map(l=>l[1]))],[]);
+  const total=LAPTOPS.reduce((s,l)=>s+l[7],0);
+  const fl=useMemo(()=>LAPTOPS.filter(l=>(brand==="الكل"||l[1]===brand)&&(l[1]+" "+l[2]+" "+l[3]).toLowerCase().includes(q.toLowerCase().trim())),[brand,q]);
+  const cats=["الكل",...new Set(ACC.map(a=>a[3]))];
+  const fa=ACC.filter(a=>ac==="الكل"||a[3]===ac);
+  return html`<div>
+  <header><div className="wrap hd">
+    <a className="logo" href="#top">ROSHDY TECH</a>
+    <nav><a href="#mobiles">📱 موبايلات</a><a href="#acc">🎧 إكسسوارات</a><a href="#laps">💻 لابتوبات</a></nav>
+    <button className=${"cartbtn"+(bump?" bump":"")} onClick=${()=>setOpen(true)}>🛒 السلة${cnt>0&&html`<span className="bdg">${cnt}</span>`}</button>
+  </div></header>
+  <div className="hero" id="top"><div className="blob b1"></div><div className="blob b2"></div>
+    <div className="wrap hg"><div>
+      <h1>عالم التكنولوجيا مع <span>ROSHDY TECH</span></h1>
+      <p>لابتوبات أصلية مستعملة بحالة ممتازة، موبايلات وإكسسوارات بأسعار مميزة. اختار واطلب مباشرة على واتساب.</p>
+      <div className="cta">
+        <a className="btn wa pulse" href=${wa("السلام عليكم Roshdy Tech 👋")} target="_blank" rel="noopener">💬 كلمنا واتساب</a>
+        <a className="btn gh" href="#laps">💻 شوف اللابتوبات</a>
+        <a className="btn gh" href=${FB} target="_blank" rel="noopener">فيسبوك</a>
+      </div>
+      <div className="stats"><div><b>${LAPTOPS.length}+</b><small>موديل لابتوب</small></div><div><b>${total}</b><small>جهاز متاح</small></div><div><b>01070813566</b><small>رقم الطلبات</small></div></div>
+    </div><div><${LapArt} b="ROSHDY" m="" big=${true}/></div></div></div>
+  <main className="wrap">
+    <section id="mobiles"><div className="sh"><h2>📱 الموبايلات</h2></div><${Mobiles}/></section>
+    <section id="acc"><div className="sh"><h2>🎧 إكسسوارات موبايل ولابتوب</h2></div>
+      <div className="chips">${cats.map(c=>html`<button key=${c} className=${"chip"+(ac===c?" on":"")} onClick=${()=>setAc(c)}>${c}</button>`)}</div>
+      <div className="grid">${fa.map((a,i)=>html`<${Acc} key=${a[0]} d=${a} i=${i} add=${add}/>`)}</div></section>
+    <section id="laps"><div className="sh"><h2>💻 اللابتوبات</h2></div>
+      <div className="chips">${brands.map(b=>html`<button key=${b} className=${"chip"+(brand===b?" on":"")} onClick=${()=>{setBrand(b);setLim(24)}}>${b}</button>`)}
+        <input className="inp" placeholder="🔍 ابحث بالموديل أو المعالج (مثال: 840G8 أو i7)" value=${q} onChange=${e=>{setQ(e.target.value);setLim(24)}}/></div>
+      <div className="grid">${fl.slice(0,lim).map((l,i)=>html`<${Laptop} key=${l[0]} d=${l} i=${i} add=${add}/>`)}</div>
+      ${fl.length===0&&html`<div className="empty">مفيش نتائج، جرّب كلمة تانية</div>`}
+      ${lim<fl.length&&html`<button className="btn more" onClick=${()=>setLim(lim+24)}>عرض المزيد (${fl.length-lim})</button>`}
+    </section>
+  </main>
+  <footer><div className="wrap"><b style=${{color:"var(--tx)",direction:"ltr",display:"inline-block"}}>ROSHDY TECH</b><br/>
+    📞 <a href="tel:01070813566">01070813566</a> • <a href=${wa("السلام عليكم")} target="_blank" rel="noopener">واتساب</a> • <a href=${FB} target="_blank" rel="noopener">فيسبوك</a></div></footer>
+  <a className="fab" href=${wa("السلام عليكم Roshdy Tech 👋")} target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+  ${open&&html`<${Cart} items=${cart} set=${setCart} close=${()=>setOpen(false)}/>`}
+  ${toast>0&&html`<div className="toast" key=${toast}>✅ اتضاف للسلة</div>`}
+  </div>`;
+}
+ReactDOM.createRoot(document.getElementById("root")).render(html`<${App}/>`);
+</script>
+</body>
+</html>
